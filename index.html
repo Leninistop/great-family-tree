@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семейное древо Булыгиных</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Семейная история</h1>
+        <nav>
+            <button id="btn-tree" class="active" onclick="switchTab('tree')">🌳 Семейное древо</button>
+            <button id="btn-econ" onclick="switchTab('econ')">📈 Вклад в экономику</button>
+        </nav>
+    </header>
+
+    <main id="tab-tree" class="tab-content active">
+        <div id="cy"></div>
+        <div class="legend">
+            <span><span class="box amber"></span> Жил/работал в Калининграде или Мамоново</span>
+            <span><span class="box green"></span> Другие регионы</span>
+        </div>
+    </main>
+
+    <main id="tab-econ" class="tab-content">
+        <div class="econ-container">
+            <h2>Влияние семьи на экономику Калининградской области</h2>
+            <p class="intro">Члены вашей семьи на протяжении десятилетий трудились на благо региона. Ниже представлены ключевые отрасли и конкретные люди, внесшие вклад в развитие Калининграда и Мамоново.</p>
+            <div id="econ-list"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
